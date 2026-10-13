@@ -3,11 +3,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-prebuilt_etc {
-    name: "fonts_customization.xml",
-
-    src: "fonts_customization.xml",
-    product_specific: true,
-    // RR: vendor/extras appends its font families and installs the result in its place.
-    installable: false,
+// RR: vendor/extras appends its font families to this list and installs the result as
+// fonts_customization.xml, so the list is only exported here.
+filegroup {
+    name: "lineage_fonts_customization",
+    srcs: ["fonts_customization.xml"],
 }
