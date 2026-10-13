@@ -8,4 +8,6 @@ prebuilt_etc {
 
     src: "fonts_customization.xml",
     product_specific: true,
+    // RR: vendor/extras appends its font families and installs the result in its place.
+    installable: false,
 }
